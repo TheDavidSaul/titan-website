@@ -15,11 +15,8 @@
       margin: 0;
       min-height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
-      color: #111827;
-      background:
-        radial-gradient(circle at top left, rgba(30, 64, 175, 0.10), transparent 34%),
-        radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.10), transparent 32%),
-        #f8fafc;
+      color: #113141;
+      background: #fffaf7;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -29,54 +26,60 @@
     .card {
       width: 100%;
       max-width: 780px;
-      background: rgba(255, 255, 255, 0.90);
-      border: 1px solid rgba(148, 163, 184, 0.28);
+      background: #fffaf7;
+      border: 1px solid rgba(17, 49, 65, 0.12);
       border-radius: 28px;
       padding: 56px 48px;
       text-align: center;
-      box-shadow: 0 24px 80px rgba(15, 23, 42, 0.10);
-      backdrop-filter: blur(10px);
+      box-shadow: 0 24px 80px rgba(17, 49, 65, 0.10);
     }
 
     .logo {
-      max-width: 360px;
-      width: 80%;
+      max-width: 380px;
+      width: 82%;
       height: auto;
       margin-bottom: 34px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .tagline {
       margin: 0;
       font-size: clamp(24px, 3vw, 34px);
-      line-height: 1.25;
+      line-height: 1.22;
       font-weight: 700;
       letter-spacing: -0.03em;
-      color: #0f172a;
+      color: #113141;
+    }
+
+    .mobile-break {
+      display: inline;
     }
 
     .divider {
       width: 72px;
       height: 1px;
-      background: #cbd5e1;
+      background: rgba(17, 49, 65, 0.22);
       margin: 36px auto;
     }
 
     .contact {
       margin: 0;
       font-size: 16px;
-      color: #64748b;
+      color: rgba(17, 49, 65, 0.72);
     }
 
     .contact a {
-      color: #0f172a;
+      color: #113141;
       font-weight: 700;
       text-decoration: none;
-      border-bottom: 1px solid rgba(15, 23, 42, 0.25);
+      border-bottom: 1px solid rgba(17, 49, 65, 0.28);
       padding-bottom: 2px;
     }
 
     .contact a:hover {
-      border-bottom-color: #0f172a;
+      border-bottom-color: #113141;
     }
 
     @media (max-width: 560px) {
@@ -90,12 +93,34 @@
       }
 
       .logo {
-        max-width: 280px;
+        max-width: 300px;
         margin-bottom: 28px;
+      }
+
+      .tagline {
+        font-size: 28px;
+        line-height: 1.18;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .mobile-break {
+        display: block;
       }
 
       .divider {
         margin: 30px auto;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .tagline {
+        font-size: 26px;
+      }
+
+      .contact {
+        font-size: 15px;
       }
     }
   </style>
@@ -106,7 +131,7 @@
     <img class="logo" src="logo.png" alt="Titan Biosciences logo" />
 
     <h1 class="tagline">
-      Curing heart disease, one gene at a time
+      Curing heart disease,<span class="mobile-break"> one gene at a time.</span>
     </h1>
 
     <div class="divider"></div>
